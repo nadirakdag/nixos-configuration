@@ -2,10 +2,6 @@
 
 {
 
-  imports = [
-    <home-manager/nixos>
-  ];
-
   home.username = "nadir";
   home.homeDirectory = "/home/nadir";
   home.stateVersion = "24.05";
@@ -46,10 +42,5 @@
   xdg.configFile."hypr/hyprpaper.conf".source = ../hypr/hyprpaper.conf;
   xdg.configFile."waybar/style.css".source = ../waybar/style.css;
 
-  xdg.userDirs = {
-    enable = true;
-    createDirectories = true;
-    pictures = "${config.home.homeDirectory}/Pictures";
-  };
 
 }
