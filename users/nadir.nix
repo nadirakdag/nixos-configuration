@@ -1,6 +1,11 @@
 { config, pkgs, ... }:
 
 {
+
+  imports = [
+    <home-manager/nixos>
+  ];
+
   home.username = "nadir";
   home.homeDirectory = "/home/nadir";
   home.stateVersion = "24.05";
