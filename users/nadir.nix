@@ -52,11 +52,4 @@
     pictures = "${config.home.homeDirectory}/Pictures";
   };
 
-  # GTK theme setup (optional)
-  gtk = {
-    enable = true;
-    theme.name = "Catppuccin-Mocha-Standard-Blue-Dark";
-    iconTheme.name = "Papirus-Dark";
-    cursorTheme.name = "Catppuccin-Macchiato-Dark-Cursors";
-  };
 }
