@@ -4,6 +4,7 @@
   imports = [
     ./hardware-configuration.nix
     ./users/nadir.nix
+    <nixpkgs/nixos/modules/programs/home-manager.nix>
   ];
 
   # Basic system
@@ -26,9 +27,6 @@
   };
 
   # Display manager + Hyprland
-  services.xserver.enable = true;
-  services.xserver.displayManager.sddm.enable = true;
-  services.xserver.displayManager.sddm.wayland.enable = true;
   programs.hyprland.enable = true;
 
   # Networking, audio
