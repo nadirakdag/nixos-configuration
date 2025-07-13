@@ -4,7 +4,7 @@
   imports = [
     ./hardware-configuration.nix
     ./users/nadir.nix
-    <nixpkgs/nixos/modules/programs/home-manager.nix>
+    <home-manager/nixos>
   ];
 
   # Basic system
