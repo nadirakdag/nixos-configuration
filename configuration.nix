@@ -8,15 +8,23 @@
   ];
 
   # Basic system
-  networking.hostName = "nixos-hypr";
+  networking.hostName = "nixos-hypr-poc";
   time.timeZone       = "Europe/Amsterdam";
-  console.keyMap      = "trq";  # Turkish Q layout
   i18n.defaultLocale  = "en_US.UTF-8";
+
+  #keyboard
+  console.keyMap      = "trq";  # Turkish Q layout
+  services.xserver.xkb = {
+    layout = "tr";
+    variant = "";
+  }
+
   
   
   # Bootloader
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader.grub.enable = true;
+  boot.loader.grub.device = "/dev/sda";
+  boot.loader.grub.useOSProber = true;
 
   # User definition
   users.users.nadir = {
@@ -64,4 +72,6 @@
   services.xserver.enable = true;
   services.xserver.displayManager.sddm.enable = true;
   services.xserver.displayManager.sddm.wayland.enable = true;
+
+  system.stateVersion = "25.05";
 }
